@@ -1,5 +1,7 @@
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
+env:
+  test: Monday
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
