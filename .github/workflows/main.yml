@@ -16,6 +16,8 @@ jobs:
       - name: Show Response
         run: |
           echo ${{ env.test }}
+          env.test: Tuesday
+          echo ${{ env.test }}
           echo ${{ steps.loginRequest.outputs.response }}
           echo ${{ steps.loginRequest.outputs.headers }}
           echo ${{ steps.loginRequest.outputs.cookies }}
