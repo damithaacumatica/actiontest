@@ -10,7 +10,7 @@ jobs:
         with:
           url: "https://hackathon.acumatica.com/Theta/entity/auth/login"
           method: 'POST'
-          data: '{"name" : "githubservice","password" : "Theta","company" : "Company","branch" : ""}'
+          data: '{"name" : "githubservice","password" : "Theta1","company" : "Company","branch" : ""}'
       - name: Show Response
         run: |
           echo ${{ steps.myRequest.outputs.response }}
