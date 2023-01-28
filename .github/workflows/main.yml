@@ -13,7 +13,7 @@ jobs:
           data: '{"name" : "githubservice","password" : "Theta","company" : "Company","branch" : ""}'
       - name: Show Response
         run: |
-          echo env.test
+          echo ${{ env.test }}
           echo ${{ steps.loginRequest.outputs.response }}
           echo ${{ steps.loginRequest.outputs.headers }}
           echo ${{ steps.loginRequest.outputs.cookies }}
