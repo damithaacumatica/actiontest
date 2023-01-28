@@ -1,0 +1,12 @@
+
+name: 'imaginary-extension'
+description: 'Imaginary extension about composing actions'
+runs:
+  using: composite
+  steps:
+    - name: Python 3
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Requirements
+      run: pip install -r requirements.txt
