@@ -6,7 +6,8 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@master      
+      - uses: actions/upload-artifact@v3
       - name: Archive Release
         uses: thedoctor0/zip-release@0.7.1
         with:
