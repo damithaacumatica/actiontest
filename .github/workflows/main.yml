@@ -6,9 +6,12 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Show Response
-        run: |
-          echo ${{ env.test }}
-          env.test: Tuesday
-          echo ${{ env.test }}
+      - uses: actions/checkout@master
+      - name: Archive Release
+        uses: thedoctor0/zip-release@0.7.1
+        with:
+          type: 'zip'
+          directory: '/deploy'
+          filename: 'release.zip'
+          exclusions: '*.git* /*node_modules/* .editorconfig'
       
