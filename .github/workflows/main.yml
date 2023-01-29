@@ -6,8 +6,14 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Zip artifact for deployment
-        run: zip release.zip ./deploy/* -r
+      - uses: actions/checkout@master      
+      - name: Archive Release
+        uses: thedoctor0/zip-release@0.7.1
+        with:
+          type: 'zip'
+          directory: 'deploy'
+          filename: 'release.zip'
+          exclusions: '*.git* /*node_modules/* .editorconfig'
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
