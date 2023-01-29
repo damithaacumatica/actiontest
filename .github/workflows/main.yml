@@ -6,11 +6,12 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master      
       - name: Archive Release
         uses: thedoctor0/zip-release@0.7.1
         with:
           type: 'zip'
-          directory: './deploy'
+          directory: 'deploy'
           filename: 'release.zip'
           exclusions: '*.git* /*node_modules/* .editorconfig'
       - name: Zip artifact for deployment
