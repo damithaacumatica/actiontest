@@ -13,6 +13,7 @@ jobs:
           type: 'zip'
           directory: 'deploy'
           filename: 'release.zip'
+          recursive: false
           exclusions: '*.git* /*node_modules/* .editorconfig'
       - name: Zip artifact for deployment
         run: zip release.zip ./deploy/*
