@@ -16,12 +16,13 @@ jobs:
           exclusions: '*.git* /*node_modules/* .editorconfig'
   zip:
     runs-on: ubuntu-latest
+    needs: Explore-GitHub-Actions
     steps:
       - name: Zip artifact for deployment
         run: zip release.zip ./deploy/* -r
   artifacts:
     runs-on: ubuntu-latest
-    needs: Explore-GitHub-Actions
+    needs: zip
     steps:    
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
