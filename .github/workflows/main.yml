@@ -10,7 +10,7 @@ jobs:
         uses: thedoctor0/zip-release@0.7.1
         with:
           type: 'zip'
-          directory: 'deploy'
+          directory: './deploy'
           filename: 'release.zip'
           exclusions: '*.git* /*node_modules/* .editorconfig'
       - name: Zip artifact for deployment
