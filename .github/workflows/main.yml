@@ -15,8 +15,6 @@ jobs:
           filename: 'release1.zip'
           recursive: false
           exclusions: '*.git* /*node_modules/* .editorconfig'
-      - name: Zip artifact for deployment
-        run: zip release.zip ./deploy/*
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
